@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+## Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+U-Call-It is the only app you'll ever need while bartending from the comfort of your home. You can browse for mixed drinks by spirit/liquor as well as search by their name. If you'd like to switch things up you can even hit the "Surprise me" button for a random drink! Click on the drink of your choice and it will display an image and the ingredients you need to make it. A fast and easy way to be the best host at all your gatherings in your home! An app inspired by the current events of the global pandemic. Stay safe, stay in and download U-Call-It!
 
-## Available Scripts
+## Link to the API you plan to use
 
-In the project directory, you can run:
+https://www.thecocktaildb.com/
 
-### `npm start`
+## Example data response you plan to use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```json
+{
+drinks: [
+{
+idDrink: "12916",
+strDrink: "Egg Nog - Healthy",
+strDrinkAlternate: null,
+strDrinkES: null,
+strDrinkDE: null,
+strDrinkFR: null,
+strDrinkZH-HANS: null,
+strDrinkZH-HANT: null,
+strTags: null,
+strVideo: null,
+strCategory: "Punch / Party Drink",
+strIBA: null,
+strAlcoholic: "Optional alcohol",
+strGlass: "Collins Glass",
+strInstructions: "Whip egg substitute and sugar together, combine with the two kinds of milk, vanilla, and rum. Mix well. Chill over night. Sprinkle with nutmeg. Makes 6 servings.",
+strInstructionsES: null,
+strInstructionsDE: "Ei-Ersatz und Zucker verrühren, mit den beiden Sorten Milch, Vanille und Rum vermengen. Gut mischen. Über Nacht kühl stellen. Mit Muskatnuss bestreuen. Ergibt 6 Portionen.",
+strInstructionsFR: null,
+strInstructionsZH-HANS: null,
+strInstructionsZH-HANT: null,
+strDrinkThumb: "https://www.thecocktaildb.com/images/media/drink/qxuppv1468875308.jpg",
+strIngredient1: "Egg",
+strIngredient2: "Sugar",
+strIngredient3: "Condensed milk",
+strIngredient4: "Milk",
+strIngredient5: "Vanilla extract",
+strIngredient6: "Rum",
+strIngredient7: "Nutmeg",
+strIngredient8: null,
+strIngredient9: null,
+strIngredient10: null,
+strIngredient11: null,
+strIngredient12: null,
+strIngredient13: null,
+strIngredient14: null,
+strIngredient15: null,
+strMeasure1: "1/2 cup ",
+strMeasure2: "3 tblsp ",
+strMeasure3: "13 oz skimmed ",
+strMeasure4: "3/4 cup skimmed ",
+strMeasure5: "1 tsp ",
+strMeasure6: "1 tsp ",
+strMeasure7: " ",
+strMeasure8: " ",
+strMeasure9: " ",
+strMeasure10: " ",
+strMeasure11: " ",
+strMeasure12: " ",
+strMeasure13: null,
+strMeasure14: null,
+strMeasure15: null,
+strCreativeCommonsConfirmed: "No",
+dateModified: "2016-07-18 21:55:08"
+}
+]
+}
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Visual of your component hierarchy
 
-### `npm test`
+![Cocktail-app-tree](https://media.git.generalassemb.ly/user/31368/files/78489080-170c-11eb-8063-5c5abfa3255a)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wire Frames
 
-### `npm run build`
+![Cocktail-app-details](https://media.git.generalassemb.ly/user/31368/files/7f6f9e80-170c-11eb-87dd-019e1595d408)
+![Cocktail-app-main](https://media.git.generalassemb.ly/user/31368/files/7da5db00-170c-11eb-8674-6fa0fb0b1206)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User Stories
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As an app user, I want to search for a drink and quickly see the recipe, so that I can begin to prepare my drink.
+- As an app user, I want to be able to search by my favorite spirit, so that I can browse various drinks I may like.
+- As an app user, I want to be able to see very clearly the ingredients I need for the drink so that I can determine if I can make this drink.
+- As an app user, I want to be able to hit a "random" button so that I do not have to pick a drink if I do not want to.
+- As an app user, I want to be able to find a drink quickly so that I can go back to enjoying my night.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### MVP Goals
 
-### `npm run eject`
+- User can easily navigate the menu
+- User can filter drinks through spirit/liquor (category)
+- User can type and search for the particular drink they want
+- User can click on their drink and see the ingredients needed to make it with a reference image
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Stretch Goals
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Users who do not wish to have an alcoholic drink can find a non-alcoholic category
+- User can have a pleasant user experience with smooth transitions on the page
+- User can have a good user experience by being able to use the app on their mobile device and on their laptop
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Gold
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- User can save their favorite drinks on the app
