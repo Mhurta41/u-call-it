@@ -6,9 +6,6 @@ nav {
 	border-radius: 5px;
 	justify-content: space-evenly;
 }
-img {
-	width: 80%;
-}
 
 ul {
 	list-style-type: none;
@@ -16,13 +13,14 @@ ul {
 
 h2 {
 	color: black;
-	margin: 20px;
+	margin: 10px;
+	font-size: 20px;
 }
 a {
 	text-decoration: none;
 }
 
-li {
+.navigation-bar {
 	text-align: center;
 	display: inline-block;
 }
@@ -32,17 +30,21 @@ a:hover {
 
 .logo-title {
 	margin: 0;
-	padding-right: 7rem;
+	padding-right: 15rem;
+	width: 60%;
 }
 
-.logo-graphic img {
+.logo-graphic {
 	justify-content: center;
+	width: 70%;
 }
+
 .bar {
 	color: black;
-	margin: 20px;
+	margin: 10px;
 }
 
-.nav-buttons {
+.nav-div {
 	align-self: center;
+	margin-right: 10px;
 }

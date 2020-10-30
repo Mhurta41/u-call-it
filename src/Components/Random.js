@@ -2,13 +2,36 @@ import React, { useState, useEffect } from 'react';
 
 const Random = () => {
 	const [randomDrink, setRandomDrink] = useState(null);
+	const [ingredients, setIngredients] = useState([]);
+	const defineIngredients = (drink) => {
+		let temp = [];
+		for (let i = 1; i <= 15; i++) {
+			const currentIngredient = drink[`strIngredient${i}`];
+			if (!currentIngredient) {
+				break;
+			}
+			temp.push(currentIngredient);
+		}
+		setIngredients(temp);
+	};
+
+	const renderIngredients = () => {
+		return (
+			<ul>
+				{ingredients.map((ingredient) => {
+					return <li>{ingredient}</li>;
+				})}
+			</ul>
+		);
+	};
+
 	useEffect(() => {
 		const randomUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 		fetch(randomUrl)
 			.then((res) => res.json())
 			.then((json) => {
 				setRandomDrink(json.drinks[0]);
-				console.log(json);
+				defineIngredients(json.drinks[0]);
 			})
 			.catch(console.error);
 	}, []);
@@ -17,7 +40,6 @@ const Random = () => {
 	}
 	return (
 		<div>
-			{/* <Header /> */}
 			<h1>Random Component</h1>
 			<h1>{randomDrink.strDrink}</h1>
 			<h2>{randomDrink.strCategory}</h2>
@@ -26,26 +48,13 @@ const Random = () => {
 				src={randomDrink.strDrinkThumb}
 				alt='random-drink'
 			/>
+			Ingredients:
+			{renderIngredients()}
 			<p>
 				Instructions:
 				{randomDrink.strInstructions}
 				Recommended glass:
 				{randomDrink.strGlass}
-				{randomDrink.strIngredient1}:{randomDrink.strMeasure1}
-				{randomDrink.strIngredient2}:{randomDrink.strMeasure2}
-				{randomDrink.strIngredient3}:{randomDrink.strMeasure3}
-				{randomDrink.strIngredient4}:{randomDrink.strMeasure4}
-				{randomDrink.strIngredient5}:{randomDrink.strMeasure5}
-				{randomDrink.strIngredient6}:{randomDrink.strMeasure6}
-				{randomDrink.strIngredient7}:{randomDrink.strMeasure7}
-				{randomDrink.strIngredient8}:{randomDrink.strMeasure8}
-				{randomDrink.strIngredient9}:{randomDrink.strMeasure9}
-				{randomDrink.strIngredient10}:{randomDrink.strMeasure10}
-				{randomDrink.strIngredient11}:{randomDrink.strMeasure11}
-				{randomDrink.strIngredient12}:{randomDrink.strMeasure12}
-				{randomDrink.strIngredient13}:{randomDrink.strMeasure13}
-				{randomDrink.strIngredient14}:{randomDrink.strMeasure14}
-				{randomDrink.strIngredient15}:{randomDrink.strMeasure15}
 			</p>
 		</div>
 	);

@@ -7,27 +7,36 @@ const Categories = () => {
 		<>
 			<h1 className='title'>Categories</h1>
 			<section className='container'>
-				<div className='card'>
-					<div className='card-image'>
-						<img src='https://i.imgur.com/7ykCky6.jpg' alt='alcoholic-drink' />
+				<Link to='/alcholic'>
+					<div className='card'>
+						<div className='card-image'>
+							<img
+								src='https://i.imgur.com/7ykCky6.jpg'
+								alt='alcoholic-drink'
+							/>
+						</div>
+						<h2 className='category-title'>Alcoholic</h2>
 					</div>
-					<h2 className='category-title'>Alcoholic</h2>
-				</div>
-				<div className='card'>
-					<div className='card-image'>
-						<img
-							src='https://i.imgur.com/lwnbwNb.jpg'
-							alt='non-alcoholic-drink'
-						/>
+				</Link>
+				<Link to='/nonalcoholic'>
+					<div className='card'>
+						<div className='card-image'>
+							<img
+								src='https://i.imgur.com/lwnbwNb.jpg'
+								alt='non-alcoholic-drink'
+							/>
+						</div>
+						<h2 className='category-title'>Non-Alcoholic</h2>
 					</div>
-					<h2 className='category-title'>Non-Alcoholic</h2>
-				</div>
-				<div className='card'>
-					<div className='card-image'>
-						<img src='https://i.imgur.com/xk103ud.jpg' alt='eggnog' />
+				</Link>
+				<Link to='/optional-alcohol'>
+					<div className='card'>
+						<div className='card-image'>
+							<img src='https://i.imgur.com/xk103ud.jpg' alt='eggnog' />
+						</div>
+						<h2 className='category-title'>Optional Alcohol</h2>
 					</div>
-					<h2 className='category-title'>Optional Alcohol</h2>
-				</div>
+				</Link>
 			</section>
 		</>
 	);

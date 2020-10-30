@@ -12,11 +12,16 @@ const App = () => {
 		<div className='body-app'>
 			<Header />
 			<main>
+				<img
+					className='banner'
+					src='https://i.imgur.com/nXoPJx3.png'
+					alt='banner'
+				/>
 				<Route path='/' exact render={() => <Redirect to='/home' />} />
 				<Route path='/home' exact component={Home} />
-				<Route path='/categories' component={Categories} />
-				<Route path='/random' component={Random} />
-				<Route path='/cocktaildetails' component={CocktailDetails} />
+				<Route path='/categories' exact component={Categories} />
+				<Route path='/random' exact component={Random} />
+				<Route path='/cocktaildetails' exact component={CocktailDetails} />
 			</main>
 		</div>
 	);
