@@ -7,7 +7,7 @@ const Categories = () => {
 		<>
 			<h1 className='title'>Categories</h1>
 			<section className='container'>
-				<Link to='/alcholic'>
+				<Link to='/alcoholic'>
 					<div className='card'>
 						<div className='card-image'>
 							<img
@@ -32,7 +32,7 @@ const Categories = () => {
 				<Link to='/optional-alcohol'>
 					<div className='card'>
 						<div className='card-image'>
-							<img src='https://i.imgur.com/xk103ud.jpg' alt='eggnog' />
+							<img src='https://i.imgur.com/gjRVpZA.jpg' alt='eggnog' />
 						</div>
 						<h2 className='category-title'>Optional Alcohol</h2>
 					</div>

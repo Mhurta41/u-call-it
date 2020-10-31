@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import './Random.css';
 
 const Random = () => {
 	const [randomDrink, setRandomDrink] = useState(null);
 	const [ingredients, setIngredients] = useState([]);
+	const [measurements, setMeasurements] = useState([]);
 	const defineIngredients = (drink) => {
 		let temp = [];
 		for (let i = 1; i <= 15; i++) {
@@ -18,11 +20,31 @@ const Random = () => {
 	const renderIngredients = () => {
 		return (
 			<ul>
-				{ingredients.map((ingredient) => {
-					return <li>{ingredient}</li>;
+				{ingredients.map((ingredient, index) => {
+					return (
+						<ul className='ingredient-list'>
+							<li>
+								<p>
+									-{ingredient} : {measurements[index]}
+								</p>
+							</li>
+						</ul>
+					);
 				})}
 			</ul>
 		);
+	};
+
+	const defineMeasurements = (measurement) => {
+		let tempMeasurement = [];
+		for (let i = 1; i <= 15; i++) {
+			const currentMeasurement = measurement[`strMeasure${i}`];
+			if (!currentMeasurement) {
+				break;
+			}
+			tempMeasurement.push(currentMeasurement);
+		}
+		setMeasurements(tempMeasurement);
 	};
 
 	useEffect(() => {
@@ -32,6 +54,7 @@ const Random = () => {
 			.then((json) => {
 				setRandomDrink(json.drinks[0]);
 				defineIngredients(json.drinks[0]);
+				defineMeasurements(json.drinks[0]);
 			})
 			.catch(console.error);
 	}, []);
@@ -39,24 +62,29 @@ const Random = () => {
 		return null;
 	}
 	return (
-		<div>
-			<h1>Random Component</h1>
+		<>
 			<h1>{randomDrink.strDrink}</h1>
-			<h2>{randomDrink.strCategory}</h2>
-			<img
-				className='drink-thumbnail'
-				src={randomDrink.strDrinkThumb}
-				alt='random-drink'
-			/>
-			Ingredients:
-			{renderIngredients()}
-			<p>
-				Instructions:
-				{randomDrink.strInstructions}
-				Recommended glass:
-				{randomDrink.strGlass}
-			</p>
-		</div>
+			<h2>({randomDrink.strCategory})</h2>
+			<section className='random-component'>
+				<div className='random-card'>
+					<img
+						className='drink-thumbnail'
+						src={randomDrink.strDrinkThumb}
+						alt='random-drink'
+					/>
+				</div>
+				<div className='random-card'>
+					<h2>Instructions:</h2>
+					<p className='random-p'>{randomDrink.strInstructions}</p>
+					<h3>Recommended glass:</h3>
+					<p className='random-p'>{randomDrink.strGlass}</p>
+				</div>
+				<div className='random-card'>
+					<h2>Ingredients:</h2>
+					{renderIngredients()}
+				</div>
+			</section>
+		</>
 	);
 };
 

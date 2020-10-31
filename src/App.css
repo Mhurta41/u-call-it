@@ -1,7 +1,4 @@
-.banner {
-	display: flex;
-	border: 5px solid black;
-	border-radius: 5px;
-	margin: 3% auto;
-	width: 80%;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+* {
+	font-family: 'Oswald', sans-serif;
 }

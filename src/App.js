@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header';
+import About from './Components/About';
 import Categories from './Components/Categories';
+import Alcoholic from './Components/Alcoholic';
+import Nonalcoholic from './Components/NonAlcoholic';
+import OptionalAlcohol from './Components/OptionalAlcohol';
 import Home from './Components/Home';
 import Random from './Components/Random';
 import CocktailDetails from './Components/CocktailDetails';
@@ -12,16 +16,15 @@ const App = () => {
 		<div className='body-app'>
 			<Header />
 			<main>
-				<img
-					className='banner'
-					src='https://i.imgur.com/nXoPJx3.png'
-					alt='banner'
-				/>
 				<Route path='/' exact render={() => <Redirect to='/home' />} />
-				<Route path='/home' exact component={Home} />
-				<Route path='/categories' exact component={Categories} />
-				<Route path='/random' exact component={Random} />
-				<Route path='/cocktaildetails' exact component={CocktailDetails} />
+				<Route path='/home' component={Home} />
+				<Route path='/about' component={About} />
+				<Route path='/categories' component={Categories} />
+				<Route path='/random' component={Random} />
+				<Route path='/cocktaildetails' component={CocktailDetails} />
+				<Route path='/alcoholic' component={Alcoholic} />
+				<Route path='/nonalcoholic' component={Nonalcoholic} />
+				<Route path='/optional-alcohol' component={OptionalAlcohol} />
 			</main>
 		</div>
 	);

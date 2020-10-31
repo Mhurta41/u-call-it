@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = (props) => {
@@ -22,6 +23,11 @@ const Home = (props) => {
 	};
 	return (
 		<div>
+			<img
+				className='banner'
+				src='https://i.imgur.com/nXoPJx3.png'
+				alt='banner'
+			/>
 			<div className='wrap'>
 				<form className='search' onChange={handleInput}>
 					<input
@@ -40,6 +46,13 @@ const Home = (props) => {
 						/>
 					</button>
 				</form>
+				<Link to='/random'>
+					<input
+						className='surprise-me-btn'
+						type='button'
+						value='Surprise me!'
+					/>
+				</Link>
 			</div>
 		</div>
 	);
