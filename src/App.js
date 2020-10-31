@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
+import Home from './Components/Home';
 import Header from './Components/Header';
 import About from './Components/About';
 import Categories from './Components/Categories';
+import Random from './Components/Random';
 import Alcoholic from './Components/Alcoholic';
 import Nonalcoholic from './Components/NonAlcoholic';
 import OptionalAlcohol from './Components/OptionalAlcohol';
-import Home from './Components/Home';
-import Random from './Components/Random';
 import CocktailDetails from './Components/CocktailDetails';
 import { Route, Redirect } from 'react-router-dom';
 
@@ -21,10 +21,10 @@ const App = () => {
 				<Route path='/about' component={About} />
 				<Route path='/categories' component={Categories} />
 				<Route path='/random' component={Random} />
-				<Route path='/cocktaildetails' component={CocktailDetails} />
 				<Route path='/alcoholic' component={Alcoholic} />
 				<Route path='/nonalcoholic' component={Nonalcoholic} />
 				<Route path='/optional-alcohol' component={OptionalAlcohol} />
+				<Route path='/cocktaildetails' component={CocktailDetails} />
 			</main>
 		</div>
 	);
