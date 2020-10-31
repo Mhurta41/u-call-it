@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const CocktailDetails = () => {
+const CocktailDetails = ({ match }) => {
 	const [drink, setDrink] = useState(null);
 	const [ingredients, setIngredients] = useState([]);
 	const [measurements, setMeasurements] = useState([]);
@@ -45,7 +45,8 @@ const CocktailDetails = () => {
 	};
 
 	useEffect(() => {
-		const drinkUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`;
+		const drink = match.params.id;
+		const drinkUrl = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drink}`;
 		fetch(drinkUrl)
 			.then((res) => res.json())
 			.then((json) => {

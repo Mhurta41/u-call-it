@@ -24,7 +24,12 @@ const App = () => {
 				<Route path='/alcoholic' component={Alcoholic} />
 				<Route path='/nonalcoholic' component={Nonalcoholic} />
 				<Route path='/optional-alcohol' component={OptionalAlcohol} />
-				<Route path='/cocktaildetails' component={CocktailDetails} />
+				<Route
+					path='/cocktaildetails/:id'
+					render={(routerProps) => {
+						return <CocktailDetails match={routerProps.match} />;
+					}}
+				/>
 			</main>
 		</div>
 	);

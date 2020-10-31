@@ -8,7 +8,7 @@ const NonAlcoholic = () => {
 	const renderNonAlcoholicDrinks = () => {
 		return nonAlcoholicDrinks.map((nonAlcoholicDrink) => {
 			return (
-				<Link to='/cocktaildetails'>
+				<Link to={`/cocktaildetails/${nonAlcoholicDrink.idDrink}`}>
 					<div className='non-alcohol-card' key={nonAlcoholicDrink.idDrink}>
 						<div className='non-alcohol-thumbnail-div'>
 							<img

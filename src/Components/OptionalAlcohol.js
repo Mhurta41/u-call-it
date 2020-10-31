@@ -7,7 +7,7 @@ const OptionalAlcohol = () => {
 	const renderOptionalAlDrinks = () => {
 		return optionalAlDrinks.map((optionalAlDrink) => {
 			return (
-				<Link to='/cocktaildetails'>
+				<Link to={`/cocktaildetails/${optionalAlDrink.idDrink}`}>
 					<div className='optional-alcohol-card' key={optionalAlDrink.idDrink}>
 						<div className='optional-alcohol-thumbnail-div'>
 							<img
