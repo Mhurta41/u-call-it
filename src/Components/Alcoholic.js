@@ -42,7 +42,7 @@ const Alcoholic = () => {
 		<div>
 			<h1>Alcoholic Beverages</h1>
 			<h3>
-				<i>(100 results)</i>
+				<i>({alcoholicDrinks.length} results)</i>
 			</h3>
 			<section className='container-alcohol'>{renderAlcoholicDrinks()}</section>
 		</div>

@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, Redirect } from 'react-router-dom';
 import './Home.css';
 
-const Home = ({ match }) => {
+const Home = (props) => {
 	const [searchText, setSearchText] = useState('');
-	// useEffect(() => {
-	// 	const searchUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${match.params.strDrink}`;
-	// 	fetch(searchUrl)
-	// 		.then((res) => res.json())
-	// 		.then((json) => {
-	// 			setSearchText(json);
-	// 			console.log(json);
-	// 		})
-	// 		.catch(console.error);
-	// }, []);
-// ***-------steps---***
-//1. get all drink data here in one array (spread operator)
-//2. use filtered drinks variable to filter() over all the drinks (higher order method filter)
-//3. Map over filtered drinks
+	const [shouldRedirect, setShouldRedirect] = useState(false);
 
-	const onSearch = (queryText) => {};
+	const onSearch = (queryText) => {
+		setShouldRedirect(true);
+	};
 	const handleInput = (event) => {
 		event.preventDefault();
 		const text = event.target.value;
@@ -36,7 +25,18 @@ const Home = ({ match }) => {
 			onSearch(searchText);
 		}
 	};
-	// const filteredDrinks = 
+
+	const renderRedirect = () => {
+		return shouldRedirect ? (
+			<Redirect
+				to={{
+					pathname: '/searchresults',
+					state: { queryText: searchText },
+				}}
+			/>
+		) : null;
+	};
+
 	return (
 		<div>
 			<img
@@ -54,7 +54,7 @@ const Home = ({ match }) => {
 						value={searchText}
 						placeholder='Search for your fav drink!'
 					/>
-					<button type='submit' class='searchButton'>
+					<button type='submit' class='searchButton' onClick={onSearch}>
 						<img
 							className='searchIcon'
 							src='https://i.imgur.com/a4DApQP.png'
@@ -62,6 +62,7 @@ const Home = ({ match }) => {
 						/>
 					</button>
 				</form>
+				{renderRedirect()}
 				<Link to='/random'>
 					<input
 						className='surprise-me-btn'

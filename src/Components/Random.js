@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import copy from 'copy-to-clipboard';
 import './Random.css';
 
 const Random = () => {
@@ -58,6 +59,9 @@ const Random = () => {
 			})
 			.catch(console.error);
 	}, []);
+	const copyLinkToClipboard = () => {
+		copy(`http://localhost:3000/cocktaildetails/${randomDrink.idDrink}`);
+	};
 	if (!randomDrink) {
 		return null;
 	}
@@ -80,6 +84,13 @@ const Random = () => {
 					<p className='random-p'>{randomDrink.strGlass}</p>
 				</div>
 				<div className='random-card'>
+					<button
+						className='share-button'
+						type='button'
+						value='share'
+						onClick={copyLinkToClipboard}>
+						Copy link!
+					</button>
 					<h2>Ingredients:</h2>
 					{renderIngredients()}
 				</div>

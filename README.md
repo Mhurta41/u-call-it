@@ -79,6 +79,14 @@ dateModified: "2016-07-18 21:55:08"
 ![Cocktail-app-details](https://media.git.generalassemb.ly/user/31368/files/7f6f9e80-170c-11eb-87dd-019e1595d408)
 ![Cocktail-app-main](https://media.git.generalassemb.ly/user/31368/files/7da5db00-170c-11eb-8674-6fa0fb0b1206)
 
+## Visual Screenshots
+
+Home page
+<img width="1415" alt="U-call-it App Screenshot" src="https://media.git.generalassemb.ly/user/31368/files/0ec70580-1c69-11eb-8478-0816a6750069">
+
+Cocktail Details
+<img width="1397" alt="U-call-it App Screenshot cocktail details" src="https://media.git.generalassemb.ly/user/31368/files/62d1ea00-1c69-11eb-8237-3896feee2c7f">
+
 ## User Stories
 
 - As an app user, I want to search for a drink and quickly see the recipe, so that I can begin to prepare my drink.

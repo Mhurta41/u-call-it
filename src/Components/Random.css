@@ -24,3 +24,10 @@ h3 {
 .random-p {
 	text-align: center;
 }
+.share-button {
+	transform: translate(400%, -300%);
+	border: 2px solid black;
+	background-color: #ffc629;
+	border-radius: 5px;
+	font-size: 18px;
+}

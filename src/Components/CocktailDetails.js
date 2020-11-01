@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import copy from 'copy-to-clipboard';
 
 const CocktailDetails = ({ match }) => {
 	const [drink, setDrink] = useState(null);
@@ -53,11 +54,12 @@ const CocktailDetails = ({ match }) => {
 				setDrink(json.drinks[0]);
 				defineIngredients(json.drinks[0]);
 				defineMeasurements(json.drinks[0]);
-				// console.log(drink.strDrink);
 			})
 			.catch(console.error);
 	}, []);
-
+	const copyLinkToClipboard = () => {
+		copy(`http://localhost:3000/cocktaildetails/${drink.idDrink}`);
+	};
 	if (!drink) {
 		return null;
 	}
@@ -80,6 +82,13 @@ const CocktailDetails = ({ match }) => {
 					<p className='random-p'>{drink.strGlass}</p>
 				</div>
 				<div className='random-card'>
+					<button
+						className='share-button'
+						type='button'
+						value='share'
+						onClick={copyLinkToClipboard}>
+						Copy link!
+					</button>
 					<h2>Ingredients:</h2>
 					{renderIngredients()}
 				</div>

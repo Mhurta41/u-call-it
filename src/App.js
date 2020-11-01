@@ -9,6 +9,7 @@ import Alcoholic from './Components/Alcoholic';
 import Nonalcoholic from './Components/NonAlcoholic';
 import OptionalAlcohol from './Components/OptionalAlcohol';
 import CocktailDetails from './Components/CocktailDetails';
+import SearchResults from './Components/SearchResults';
 import { Route, Redirect } from 'react-router-dom';
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
 						return <CocktailDetails match={routerProps.match} />;
 					}}
 				/>
+				<Route path='/searchresults' component={SearchResults} />
 			</main>
 		</div>
 	);

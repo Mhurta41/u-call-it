@@ -42,7 +42,7 @@ const NonAlcoholic = () => {
 		<div>
 			<h1>Non-Alcoholic</h1>
 			<h3>
-				<i>(58 results)</i>
+				<i>({nonAlcoholicDrinks.length} results)</i>
 			</h3>
 			<section className='container-non-alcohol'>
 				{renderNonAlcoholicDrinks()}

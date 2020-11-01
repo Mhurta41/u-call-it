@@ -31,7 +31,6 @@ const OptionalAlcohol = () => {
 			.then((res) => res.json())
 			.then((json) => {
 				setOptionalAlDrinks(json.drinks);
-				console.log(json.drinks);
 			})
 			.catch(console.error);
 	}, []);
@@ -42,7 +41,7 @@ const OptionalAlcohol = () => {
 		<div>
 			<h1>Optional Alcohol</h1>
 			<h3>
-				<i>(9 results)</i>
+				<i>({optionalAlDrinks.length} results)</i>
 			</h3>
 			<section className='container-optional-alcohol'>
 				{renderOptionalAlDrinks()}
