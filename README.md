@@ -98,7 +98,7 @@ Cocktail Details
 ### MVP Goals
 
 - User can easily navigate the menu
-- User can filter drinks through spirit/liquor (category)
+- User can filter drinks through category
 - User can type and search for the particular drink they want
 - User can click on their drink and see the ingredients needed to make it with a reference image
 
@@ -109,7 +109,7 @@ Cocktail Details
 - User can have a pleasant user experience with smooth transitions on the page
 - User can have a good user experience by being able to use the app on their mobile device and on their laptop
 
-## Gold level stretch goals
+## Gold level stretch goals (not included yet)
 
 - User can save their favorite drinks on the app
 
