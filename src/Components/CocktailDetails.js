@@ -58,7 +58,7 @@ const CocktailDetails = ({ match }) => {
 			.catch(console.error);
 	}, []);
 	const copyLinkToClipboard = () => {
-		copy(`http://localhost:3000/cocktaildetails/${drink.idDrink}`);
+		copy(`https://u-call-it-mh.herokuapp.com/cocktaildetails/${drink.idDrink}`);
 	};
 	if (!drink) {
 		return null;

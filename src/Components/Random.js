@@ -60,7 +60,9 @@ const Random = () => {
 			.catch(console.error);
 	}, []);
 	const copyLinkToClipboard = () => {
-		copy(`http://localhost:3000/cocktaildetails/${randomDrink.idDrink}`);
+		copy(
+			`https://u-call-it-mh.herokuapp.com/cocktaildetails/${randomDrink.idDrink}`
+		);
 	};
 	if (!randomDrink) {
 		return null;
