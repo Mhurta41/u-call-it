@@ -2,11 +2,11 @@
 
 U-Call-It is the only app you'll ever need while bartending from the comfort of your home. You can browse for mixed drinks by spirit/liquor as well as search by their name. If you'd like to switch things up you can even hit the "Surprise me" button for a random drink! Click on the drink of your choice and it will display an image and the ingredients you need to make it. A fast and easy way to be the best host at all your gatherings in your home! An app inspired by the current events of the global pandemic. Stay safe, stay in and download U-Call-It!
 
-## Link to the API you are using
+## Link to the API
 
 https://www.thecocktaildb.com/
 
-## Example data response you plan to use
+## Example of data response
 
 ```json
 {
