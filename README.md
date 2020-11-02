@@ -90,7 +90,7 @@ Cocktail Details
 ## User Stories
 
 - As an app user, I want to search for a drink and quickly see the recipe, so that I can begin to prepare my drink.
-- As an app user, I want to be able to search by my favorite spirit, so that I can browse various drinks I may like.
+- As an app user, I want to be able to search by categories, so that I can browse various drinks I may like.
 - As an app user, I want to be able to see very clearly the ingredients I need for the drink so that I can determine if I can make this drink.
 - As an app user, I want to be able to hit a "random" button so that I do not have to pick a drink if I do not want to.
 - As an app user, I want to be able to find a drink quickly so that I can go back to enjoying my night.
@@ -104,6 +104,7 @@ Cocktail Details
 
 ### Stretch Goals
 
+- Users can click a copy link button so they can send the drink details to their friends
 - Users who do not wish to have an alcoholic drink can find a non-alcoholic category
 - User can have a pleasant user experience with smooth transitions on the page
 - User can have a good user experience by being able to use the app on their mobile device and on their laptop
