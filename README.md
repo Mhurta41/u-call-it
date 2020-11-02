@@ -108,7 +108,7 @@ Cocktail Details
 - User can have a pleasant user experience with smooth transitions on the page
 - User can have a good user experience by being able to use the app on their mobile device and on their laptop
 
-### Gold
+## Gold level stretch goals
 
 - User can save their favorite drinks on the app
 
