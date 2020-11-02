@@ -2,7 +2,7 @@
 
 U-Call-It is the only app you'll ever need while bartending from the comfort of your home. You can browse for mixed drinks by spirit/liquor as well as search by their name. If you'd like to switch things up you can even hit the "Surprise me" button for a random drink! Click on the drink of your choice and it will display an image and the ingredients you need to make it. A fast and easy way to be the best host at all your gatherings in your home! An app inspired by the current events of the global pandemic. Stay safe, stay in and download U-Call-It!
 
-## Link to the API you plan to use
+## Link to the API you are using
 
 https://www.thecocktaildb.com/
 
@@ -114,6 +114,24 @@ Cocktail Details
 
 ## Technologies used
 
--React
--CSS
--Javascript
+- React
+- CSS
+- Javascript
+
+## Getting started
+
+- Clone this project from Github
+- open on a server like LiveServer or start on NPM scripts
+
+## Contribution Guidelines
+
+Thanks for contributing! I am always looking to better my code or find a more efficient way of doing things!
+
+- Please, fork and clone repo and submit a pull request
+- If you found a bug? Please submit an issue
+  Thank you again!
+
+## Sources:
+
+- API: https://www.thecocktaildb.com/
+- images made on canva.com
