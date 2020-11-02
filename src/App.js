@@ -11,10 +11,16 @@ import OptionalAlcohol from './Components/OptionalAlcohol';
 import CocktailDetails from './Components/CocktailDetails';
 import SearchResults from './Components/SearchResults';
 import { Route, Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
 	return (
 		<div className='body-app'>
+			<Helmet>
+				<meta charSet='utf-8' />
+				<title>U-Call-It!</title>
+				<link rel='icon' type='image/png' href='favicon.png' sizes='16x16' />
+			</Helmet>
 			<Header />
 			<main>
 				<Route path='/' exact render={() => <Redirect to='/home' />} />
