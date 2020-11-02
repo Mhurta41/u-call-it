@@ -16,6 +16,15 @@ const SearchResults = (props) => {
 	}, []);
 
 	const renderResults = () => {
+		if (searchResults === null) {
+			return (
+				<img
+					className='error-image'
+					src='https://i.imgur.com/0j8yWh8.png'
+					alt='no-results'
+				/>
+			);
+		}
 		return searchResults.map((drink) => {
 			return (
 				<Link to={`/cocktaildetails/${drink.idDrink}`}>
@@ -37,9 +46,9 @@ const SearchResults = (props) => {
 	};
 	return (
 		<div>
-			<h1>Search Results:</h1>
+			<h1>Search Results</h1>
 			<h3>
-				<i>{searchResults.length} results</i>
+				{searchResults != null ? <i>{searchResults.length} results </i> : null}
 			</h3>
 			<section className='container-alcohol'>{renderResults()}</section>
 		</div>
