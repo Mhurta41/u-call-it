@@ -47,9 +47,7 @@ const SearchResults = (props) => {
 	return (
 		<div>
 			<h1>Search Results</h1>
-			<h3>
-				{searchResults != null ? <i>{searchResults.length} results </i> : null}
-			</h3>
+			<h3>{searchResults ? <i>{searchResults.length} results </i> : null}</h3>
 			<section className='container-alcohol'>{renderResults()}</section>
 		</div>
 	);

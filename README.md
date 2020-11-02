@@ -111,3 +111,9 @@ Cocktail Details
 ### Gold
 
 - User can save their favorite drinks on the app
+
+## Technologies used
+
+-React
+-CSS
+-Javascript
